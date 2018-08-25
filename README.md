@@ -1,6 +1,6 @@
 # sell
 
-> A Vue.js project
+> 高仿饿了么
 
 ## Build Setup
 
