@@ -20,6 +20,11 @@
   import header from './components/header/header';
 
   export default {
+    data() {
+      return {
+        seller: {}
+      };
+    },
     components: {
       'v-header': header
     }
