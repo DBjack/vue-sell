@@ -4,6 +4,7 @@ import Vue from 'vue';
 import VueResource from 'vue-resource';
 import App from './App';
 import router from './router';
+import './common/stylus/index.styl';
 
 Vue.use(VueResource);
 
