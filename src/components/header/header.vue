@@ -23,9 +23,11 @@
       </div>
     </div>
     <div class="bulletin-wrapper"> <!--公告-->
-      <span class="bulletin-title"></span>
-      <span class="bulletin-text">{{ seller.bulletin }}</span>
+      <span class="bulletin-title"></span><span class="bulletin-text">{{ seller.bulletin }}</span><!--此处两个span没换行是为了去除多余的间隙-->
       <span class="icon-keyboard_arrow_right"></span> <!--右箭头-->
+    </div>
+    <div class="background">
+      <img :src="seller.avatar" alt="" width="100%" height="100%">
     </div>
   </div>
 </template>
@@ -47,8 +49,9 @@
   @import '../../common/stylus/mixin.styl'; // 此处不可用alias省略
   
   .header
-    background: #728080
+    position: relative
     color: #fff
+    background-color: rgba(7, 17, 27, 0.5)
     .content-wrapper
       position: relative
       padding: 24px 12px 18px 24px
@@ -121,4 +124,40 @@
           margin-left: 2px
           line-height: 24px
           font-size: 10px
+    .bulletin-wrapper
+      position: relative
+      height: 28px
+      line-height: 28px
+      padding: 0 22px 0 12px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      background-color: rgba(7, 17, 27, 0.2)
+      .bulletin-title
+        display: inline-block
+        vertical-align: top
+        margin-top: 7px
+        width: 22px
+        height: 12px
+        bg-image('bulletin')
+        background-size: 22px 12px
+        background-repeat: no-repeat
+      .bulletin-text
+        vertical-align: top
+        margin: 0 4px
+        font-size: 10px
+        font-weight: 200
+      .icon-keyboard_arrow_right
+        position: absolute
+        font-size: 10px
+        right: 12px
+        top: 8px
+    .background
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: -1
+      filter: blur(10px) // 模糊
 </style>
