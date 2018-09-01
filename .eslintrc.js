@@ -49,6 +49,8 @@ module.exports = {
     "comma-dangle": ["error", "never"],
     "space-before-function-paren": 0,
     "indent": 0,
-    "no-trailing-spaces": 0
+    "no-trailing-spaces": 0,
+    "eol-last": 0,
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }]
   }
 }
